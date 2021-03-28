@@ -18,6 +18,7 @@ Number.prototype.toNumber = function() {
 
 setMarks();
 const BHO = V(27);
+const eWSq = BHO*468;
 /* eslint-enable */
 let clickCoolDown = 0;
 let infinityButtonText = 0;
@@ -80,7 +81,7 @@ let ordColor = "no";
 
 const get = x => document.getElementById(x);
 const musicLink = [
-  //"https://cdn.glitch.com/03a4b67b-6f18-4f6d-8d37-50a18fb615c8%2FGoing%20Down%20by%20Jake%20Chudnow%20%5BHD%5D.mp3?v=1581538237884",
+  "https://cdn.glitch.com/03a4b67b-6f18-4f6d-8d37-50a18fb615c8%2FGoing%20Down%20by%20Jake%20Chudnow%20%5BHD%5D.mp3?v=1581538237884",
   "https://cdn.glitch.com/03a4b67b-6f18-4f6d-8d37-50a18fb615c8%2FHypnothis.mp3?v=1584285594822",
   "https://cdn.glitch.com/310d7aca-4728-445f-9084-db26ceccd7b5%2FArseniy%20Shkljaev%20-%20Nuclearoids%20%5BTrance%5D.mp3?v=1591548196791",
   "https://cdn.glitch.com/310d7aca-4728-445f-9084-db26ceccd7b5%2FHeaven%20and%20Hell%20-%20Jeremy%20Blake%20%5BMpgun.com%5D.mp3?v=1592859293921",
@@ -88,7 +89,7 @@ const musicLink = [
 ];
 const musicName = [
   "OFF",
-  //"Going Down by Jake Chudnow",
+  "Going Down by Jake Chudnow",
   "Kevin Macleod - Hypnothis [Royalty Free]",
   "Arseniy Shkljaev - Nuclearoids (http://arseniymusic.com/)",
   "Jeremy Blake - Heaven and Hell (YT Library) [Public Domain]",
@@ -504,7 +505,7 @@ function loop(unadjusted, off = 0) {
     collapse();
   const themeSave = `<link rel="stylesheet" href="${["style/light", "style/dark", "style/space"][game.theme]}.css">`;
   if (get("theme").innerHTML !== themeSave) get("theme").innerHTML = themeSave;
-  if (game.OP >= V(27) || game.ord >= V(27) || game.factorBoosts >= 25)
+  if (game.OP >= BHO || game.ord >= BHO || game.factorBoosts >= 25)
     game.reachedBHO = 1;
   project(buptotalMute);
   if (ms > 0) render();
