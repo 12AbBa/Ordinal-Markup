@@ -81,7 +81,7 @@ let ordThresh = {
 let getPsi = ord => {
   if (game.incrementyverse==1) {
     let level = 154
-    if (game.bigBrainOrd.gte(ordThreshData["buchholz e(W2+1)"])) level=155
+    if (game.bigBrainOrd.gte(ordThreshData[game.buchholz=0:"madore e(W2+1)"?"buchholz e(W2+1)"])) level=155
     if (game.bigBrainOrd.gte(Infinity)) level=156
     return level
   }
