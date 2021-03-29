@@ -563,7 +563,7 @@ function render() {
   get("psiLevel").innerText = ordLevel
   if (get("Tab4").style.display == "block") {
   if (ordLevel == 154) {
-    get("nextPsiLevel").innerHTML = displayHugeOrd(game.buchholz=0?ordThreshData["madore e(W2+1)"]:ordThreshData["buchholz e(W2+1)"])
+    get("nextPsiLevel").innerHTML = displayHugeOrd(game.buchholz==0?ordThreshData["madore e(W2+1)"]:ordThreshData["buchholz e(W2+1)"])
   } else {
     get("nextPsiLevel").innerHTML = displayOrd(getPsiReq(ordLevel+1)(game.base),game.base)
   }}
