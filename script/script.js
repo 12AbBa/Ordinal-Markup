@@ -18,7 +18,6 @@ Number.prototype.toNumber = function() {
 
 setMarks();
 const BHO = V(27);
-const eWSq = BHO*468;
 /* eslint-enable */
 let clickCoolDown = 0;
 let infinityButtonText = 0;
