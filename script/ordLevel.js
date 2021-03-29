@@ -94,7 +94,7 @@ let getPsi = ord => {
 
 let getPsiReq = level => {
   if (level >= 155) {
-    return [game.buchholz=0?ordThreshData["madore e(W2+1)"]:ordThreshData["buchholz e(W2+1)"]],EN(Infinity)][level-155]
+    return [game.buchholz=0?ordThreshData["madore e(W2+1)"]:ordThreshData["buchholz e(W2+1)"],EN(Infinity)][level-155]
   }
   let k
   for (k in ordThresh) {
