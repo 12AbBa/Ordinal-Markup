@@ -358,9 +358,9 @@ const achieveData = [
       () => game.incrementy.gte("ee10"),
       () => game.incrementy.gte("eee10"),
       () => game.incrementy.gte(new ExpantaNum("10^^10")),
-      () => game.incrementy.gte(new Expantanum("10^^^10")),
-      () => game.incrementy.gte(new Expantanum("10^^^^10")),
-      () => game.incrementy.gte(new Expantanum("10^^^^^^^^^^10")),
+      () => game.incrementy.gte(new ExpantaNum("10^^^10")),
+      () => game.incrementy.gte(new ExpantaNum("10^^^^10")),
+      () => game.incrementy.gte(new ExpantaNum("10^^^^^^^^^^10")),
       () => false,
       () => false
     ],
