@@ -1,13 +1,14 @@
 "use strict";
 let incrementyUpgradeLoop = [EN(0),EN(0),EN(0)]
 let inEnterIncrementyverseAnimation = 0
+let HugeOrdMarks=
 const incrementyverseUpgradeCosts = [EN("1e1136"),EN("1e23500"),EN("e5e7"),EN("eee10"),EN("10^^10000"),EN("10^^^1000"),EN("10^^^^^100"),EN("10^^^^^^^^^^10"),EN("NaN"),EN("NaN"),EN("NaN"),EN("NaN")]
 const ordThreshData = {
   "buchholz e(W2+1)": EN(3).pow(EN(3).pow(3**26+10/3).add(27)),
   "madore e(W2+1)": EN(3).pow(EN(3).pow(EN(3).pow(30).add(3))),
   "hyperoperational cutoff": EN.arrow(3,27,3)
 }
-const tenTetrTen = EN(10).tetr(10)
+
 const fractalTemplate = document.getElementById("fractalEngineMachines").children[0].cloneNode(true)
 
 
@@ -406,7 +407,18 @@ function realDisplayHugeOrd(x,layer=0) {
     return "Ω<sub>2</sub>Ω2"
   }
   if (x.gte(ordThreshData["madore e(W2+1)"])&&game.buchholz == 0) {
-    return "ε<sub>Ω<sup>2</sup></sub>"
+    if (x.array[x.array.length-1][0]==1)
+      return "ε<sub>Ω<sup>2</sup></sub>"
+    if (x.array[x.array.length-1][0]==2)
+      return "ζ<sub>Ω2</sub>"
+    if (x.array[x.array.length-1][0]==3)
+      return "φ(Ω,1)"
+    if (x.array[x.array.length-1][0]==4)
+      return "φ(Ω+1,Ω)"
+    if (x.array[x.array.length-1][0]==5)
+      return "φ(Ω+2,Ω)"
+    if (x.array[x.array.length-1][0]==5)
+      return "φ(Ω2,0)"
   }
   if (x.gte(3**27)) {
     //return `Ψ<sub>1</sub>(Ψ<sub>2</sub>(Ω)+Ψ<sub>1</sub>(Ψ<sub>2</sub>(Ω)+${realDisplayHugeOrd(x.logBase(3).div(41).floor())}))`
